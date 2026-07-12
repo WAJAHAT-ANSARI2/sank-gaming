@@ -79,7 +79,7 @@ A full-stack CD/game rental web application where users can browse available gam
 - **Database:** SQL
 - **Location:** Karachi, Pakistan
 - **Hours:** 10am – 10pm (Daily)
-- **Contact:** sank.gaming@outlook.com
+- **Contact:** sankgaming5384@gmail.com
 
 ### Social Media
 - 📸 Instagram: [@sinkintheworldofgaming](https://instagram.com/sinkintheworldofgaming)
