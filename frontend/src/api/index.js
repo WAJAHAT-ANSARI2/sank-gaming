@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://sank-gaming.wuaze.com/backend/api',
+baseURL: 'https://sankgaming.thsite.top/backend/api',
 });
 
 API.interceptors.request.use((config) => {
