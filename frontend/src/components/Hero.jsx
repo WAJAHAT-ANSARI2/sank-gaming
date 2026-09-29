@@ -231,7 +231,7 @@ function SearchWithOrbit() {
 function VideoBanner() {
   const [url, setUrl] = useState(null);
   useEffect(()=>{
-    fetch('http://localhost/backend/api/admin/video.php')
+    fetch('/api/backend/admin/video.php')
       .then(r=>r.json())
       .then(d=>{ if(d.video) setUrl(d.video.url); })
       .catch(()=>{});

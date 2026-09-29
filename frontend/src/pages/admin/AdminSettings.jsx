@@ -21,7 +21,7 @@ export default function AdminSettings() {
     }).finally(() => setLoading(false));
 
     // Load current video
-    fetch('http://localhost/backend/api/admin/video.php', {
+    fetch('/api/backend/admin/video.php', {
       headers: { Authorization: `Bearer ${localStorage.getItem('sg_token')}` }
     }).then(r=>r.json()).then(d=>{ if(d.video) setVideo(d.video); }).catch(()=>{});
   }, []);
@@ -40,7 +40,7 @@ export default function AdminSettings() {
       const res = await API.post('/admin/video.php', fd, { headers:{ 'Content-Type':'multipart/form-data' } });
       if (res.data.success) {
         setVideoMsg('✅ Video uploaded successfully!');
-        fetch('http://localhost/backend/api/admin/video.php', { headers:{ Authorization:`Bearer ${localStorage.getItem('sg_token')}` } })
+        fetch('/api/backend/admin/video.php', { headers:{ Authorization:`Bearer ${localStorage.getItem('sg_token')}` } })
           .then(r=>r.json()).then(d=>{ if(d.video) setVideo(d.video); });
       }
     } catch { setVideoMsg('❌ Upload failed. Check file size/type.'); }
