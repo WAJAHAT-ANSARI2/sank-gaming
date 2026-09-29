@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/backend/:path*",
+      "destination": "https://sankgaming.thsite.top/backend/api/:path*"
+    }
+  ]
+}
