@@ -17,8 +17,8 @@ export default function Browse() {
   useEffect(() => {
     setLoading(true);
     getCDs({ search, platform, genre })
-      .then(res => setCds(res.data.cds))
-      .catch(() => {})
+      .then(res => setCds(res.data?.cds || []))
+      .catch(() => setCds([]))
       .finally(() => setLoading(false));
   }, [search, platform, genre]);
 
