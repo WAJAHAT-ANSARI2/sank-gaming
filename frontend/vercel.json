@@ -1,7 +1,8 @@
 {
-  "functions": {
-    "api/backend/[...path].js": {
-      "runtime": "nodejs20.x"
+  "rewrites": [
+    {
+      "source": "/api/backend/:path*",
+      "destination": "https://sankgaming.is-great.net/backend/api/:path*"
     }
-  }
+  ]
 }
